@@ -25,7 +25,15 @@ Right now, you can download the repo and put the files inside the ``toolboxes`` 
 tbxmanager install brcm
 tbxmanager enable brcm
 ```
-this should add the ``brcm`` directory to the MATLAB directories. Or simply download and put the files in a certain directory and add the directory to the MATLAB directories. Then run the following command in your MATLAB Command Window:
-```matlab
+this should add the ``brcm`` directory to the MATLAB directories. Or simply download and put the files in a certain directory and add the directory to the MATLAB directories:
+```MATLAB
+addpath(PATH_TO_YOUR_DIRECTORY)
+```
+ Then run the following command in your MATLAB Command Window:
+```MATLAB
 BCRM_Setup
+```
+After this, you should be able to run sample project:
+```MATLAB
+BCRM_DemoFile
 ```
