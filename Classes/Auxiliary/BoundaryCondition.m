@@ -19,15 +19,15 @@ classdef BoundaryCondition
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
        properties (SetAccess = {?Building}) % IF_WITH_METACLASS_SUPPORT
    %properties % IF_NO_METACLASS_SUPPORT
-      identifier_1@char = '';   % State identifier of an adjacent zone.
-      identifier_2@char = '';   % State identifier of first/last layer of a building element or a disturbance input identifier.
-      value@double = 0;           % Value (Resistance) that connects the two states.
+      identifier_1 char = '';   % State identifier of an adjacent zone.
+      identifier_2 char = '';   % State identifier of first/last layer of a building element or a disturbance input identifier.
+      value double = 0;           % Value (Resistance) that connects the two states.
    end
    
        methods (Access = {?Building}) % IF_WITH_METACLASS_SUPPORT

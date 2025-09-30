@@ -33,7 +33,7 @@ classdef BuildingModel < matlab.mixin.Copyable
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
@@ -41,11 +41,11 @@ classdef BuildingModel < matlab.mixin.Copyable
        properties (SetAccess = {?Building}) % IF_WITH_METACLASS_SUPPORT
    %properties % IF_NO_METACLASS_SUPPORT
       
-      identifiers@Identifier;     % stores the state,input,output and constraint identifiers
+      identifiers Identifier;     % stores the state,input,output and constraint identifiers
       
       % Thermal RC-Model and Exteral Heat Flux Model
-      thermal_submodel@ThermalModel = ThermalModel.empty;
-      EHF_submodels@cell = {};               % cell array for different type of EHF class objects
+      thermal_submodel ThermalModel = ThermalModel.empty;
+      EHF_submodels cell = {};               % cell array for different type of EHF class objects
       
       % system matrices of complete building model
       % State Space matrices
@@ -61,16 +61,16 @@ classdef BuildingModel < matlab.mixin.Copyable
        % Boundary conditions for thermal model generation
       % Stores the states x that are connected with
       % 'ADB','AMB','GND' and user-specified disturbances
-      boundary_conditions@struct = struct(Constants.ambient_name_str,BoundaryCondition.empty,Constants.adiabatic_name_str,BoundaryCondition.empty,...
+      boundary_conditions struct = struct(Constants.ambient_name_str,BoundaryCondition.empty,Constants.adiabatic_name_str,BoundaryCondition.empty,...
          Constants.ground_name_str,BoundaryCondition.empty,Constants.user_defined_name_str,BoundaryCondition.empty);
-      model_exists@logical = false;       % Flag indicating that the complete building model according to the current state of its data has been generated
+      model_exists logical = false;       % Flag indicating that the complete building model according to the current state of its data has been generated
    end  
    properties(SetObservable)
-      is_dirty@logical = false;           % flag indicating data the building model does not match the current state (new declarations and data)
+      is_dirty logical = false;           % flag indicating data the building model does not match the current state (new declarations and data)
    end
    
    properties(SetAccess = private)
-      Ts_hrs@double;                     % Discretization time step
+      Ts_hrs double;                     % Discretization time step
    end
    
        methods(Access = {?Building}) % IF_WITH_METACLASS_SUPPORT

@@ -20,21 +20,21 @@ classdef InternalGains < EHFModelBaseClass
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
    
    properties(Hidden,Constant)
-      n_properties@uint64 = uint64(3);        % Number of properties required for object instantation
-      multiIncludeOk@logical = false;
+      n_properties uint64 = uint64(3);        % Number of properties required for object instantation
+      multiIncludeOk logical = false;
       
       % model specific conventions
-      internal_gains_name_str@char = 'Internal gains';    % model name
-      internal_gains_identifier@char = 'IG';             % model signal labe tag
+      internal_gains_name_str char = 'Internal gains';    % model name
+      internal_gains_identifier char = 'IG';             % model signal labe tag
       
       % Required file header for the specific model data file
-      internal_gains_file_header@cell = { 'zone_identifier' 'disturbance_identifier'}; % make sure this coincides with below
+      internal_gains_file_header cell = { 'zone_identifier' 'disturbance_identifier'}; % make sure this coincides with below
       header_zone_id_str = 'zone_identifier';
       header_v_id_str = 'disturbance_identifier';
       

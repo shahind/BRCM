@@ -23,34 +23,34 @@ classdef ThermalModelData < matlab.mixin.Copyable
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
        properties(SetAccess = {?Building}) % IF_WITH_METACLASS_SUPPORT
    %properties % IF_NO_METACLASS_SUPPORT
-      zones@Zone = Zone.empty;                                             % stores the zone data
-      building_elements@BuildingElement = BuildingElement.empty;           % stores the building element data
-      constructions@Construction = Construction.empty;                     % stores the construction data
-      materials@Material = Material.empty;                                 % stores the material data
-      windows@Window = Window.empty;                                       % stores the window data
-      parameters@Parameter = Parameter.empty;                              % stores the parameter data
-      nomass_constructions@NoMassConstruction = NoMassConstruction.empty;  % stores the no mass construction data
+      zones Zone = Zone.empty;                                             % stores the zone data
+      building_elements BuildingElement = BuildingElement.empty;           % stores the building element data
+      constructions Construction = Construction.empty;                     % stores the construction data
+      materials Material = Material.empty;                                 % stores the material data
+      windows Window = Window.empty;                                       % stores the window data
+      parameters Parameter = Parameter.empty;                              % stores the parameter data
+      nomass_constructions NoMassConstruction = NoMassConstruction.empty;  % stores the no mass construction data
    end % properties(SetAccess = {?Building})
    
    % stores the current data source path
    properties(SetAccess=private)
-      source_files@struct = struct(Constants.zone_filename,'',Constants.buildingelement_filename,'',Constants.construction_filename,'',...
+      source_files struct = struct(Constants.zone_filename,'',Constants.buildingelement_filename,'',Constants.construction_filename,'',...
          Constants.material_filename,'',Constants.window_filename,'',Constants.parameter_filename,'',Constants.nomass_construction_filename,'');
    end % (SetAccess=private)
    
    properties(Hidden)
-      data_directory_source@char = '';      % stores the path of the latest loaded directory
-      data_directory_target@char = '';      % stores the path of the latest target directory of a writing process
+      data_directory_source char = '';      % stores the path of the latest loaded directory
+      data_directory_target char = '';      % stores the path of the latest target directory of a writing process
    end % properties(Hidden)
    
    properties(SetObservable)
-      is_dirty@logical = false;               % flag indicating data the building data has been modified
+      is_dirty logical = false;               % flag indicating data the building data has been modified
    end % properies(SetObservable)
    
        methods(Access = {?Building}) % IF_WITH_METACLASS_SUPPORT

@@ -20,7 +20,7 @@ function figure_handle = plot(obj,input_cell)
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    

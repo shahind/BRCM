@@ -21,21 +21,21 @@ classdef ThermalModel
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
    
    
    properties(Hidden,Constant)
-      n_properties@uint64 = uint64(1);    % number of required properties for instantation of object
+      n_properties uint64 = uint64(1);    % number of required properties for instantation of object
    end % properties(Constant,Hidden)
    
        properties (SetAccess = {?Building}) % IF_WITH_METACLASS_SUPPORT
    %properties % IF_NO_METACLASS_SUPPORT
-      A@double = [];                      % state space matrix
-      Bq@double = [];                     % heat-flux input q to state x matrix
-      Xcap@double = [];                   % Capacitance matrix
+      A double = [];                      % state space matrix
+      Bq double = [];                     % heat-flux input q to state x matrix
+      Xcap double = [];                   % Capacitance matrix
    end % properties(SetAccess = {?Building})
    
        methods(Access = {?Building}) % IF_WITH_METACLASS_SUPPORT

@@ -19,20 +19,20 @@ classdef Parameter
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
    
    properties(Hidden,Constant)
-      n_properties@uint64 = uint64(3);
+      n_properties uint64 = uint64(3);
    end % properties(Constant,Hidden)
    
       properties (SetAccess = {?ThermalModelData}) % IF_WITH_METACLASS_SUPPORT
    %properties % IF_NO_METACLASS_SUPPORT
-      identifier@char = '';
-      description@char = '';
-      value@char = '0'; % since we support 'NULL'
+      identifier char = '';
+      description char = '';
+      value char = '0'; % since we support 'NULL'
    end % properties
    
       methods (Access = {?ThermalModelData}) % IF_WITH_METACLASS_SUPPORT

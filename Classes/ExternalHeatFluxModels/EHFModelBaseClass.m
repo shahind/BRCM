@@ -20,35 +20,35 @@ classdef EHFModelBaseClass
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
    properties(Constant)
       
-      identifiers_fullModel_str@char = 'identifiers_fullModel';
+      identifiers_fullModel_str char = 'identifiers_fullModel';
       
    end
    properties(Constant,Abstract)
       
-      multiIncludeOk@logical;
+      multiIncludeOk logical;
       
    end
    
    properties(SetAccess = protected)
-      EHF_identifier@char;          % EHF identifier for the specific model
-      Aq@double;                      % state x to state q matrix
-      Bq_u@double;                    % Input u to state q matrix
-      Bq_v@double;                    % Input v to state q matrix
-      Bq_vu@double;                   % cube matrix for the bilinear part of the model
-      Bq_xu@double;                   % cube matrix for the bilinear part of the model
-      identifiers@Identifier;         % Model specific identifiers for states, inputs, disturbances and constraints
-      source_file@char = '';        % source file path of the EHF data
+      EHF_identifier char;          % EHF identifier for the specific model
+      Aq double;                      % state x to state q matrix
+      Bq_u double;                    % Input u to state q matrix
+      Bq_v double;                    % Input v to state q matrix
+      Bq_vu double;                   % cube matrix for the bilinear part of the model
+      Bq_xu double;                   % cube matrix for the bilinear part of the model
+      identifiers Identifier;         % Model specific identifiers for states, inputs, disturbances and constraints
+      source_file char = '';        % source file path of the EHF data
       
    end
    
    properties
-      class_file@char = '';         % class file name of the derived model class
+      class_file char = '';         % class file name of the derived model class
    end
    
    % Abstract method makes the entire class abstract. It is not possible

@@ -19,25 +19,25 @@ classdef BuildingElement
    % You should have received a copy of the GNU General Public License
    % along with the BRCM Toolbox.  If not, see <http://www.gnu.org/licenses/>.
    %
-   % For support check www.brcm.ethz.ch.
+   % For support check www.brcm.ethz.ch. Latest update: 2025 Sep 30 by Shahin Darvishpour (shahin.darvishpour@ubc.ca)
    % ------------------------------------------------------------------------
    
    
    
    properties(Hidden,Constant)
-      n_properties@uint64 = uint64(8);        % number of properties required for an object instance
-      key@char = 'B';                       % identifier key, first letter of the identifier, e.g. B0001
+      n_properties uint64 = uint64(8);        % number of properties required for an object instance
+      key char = 'B';                       % identifier key, first letter of the identifier, e.g. B0001
    end % properties(Constant,Hidden)
    
        properties (SetAccess = {?ThermalModelData}) % IF_WITH_METACLASS_SUPPORT
    %properties % IF_NO_METACLASS_SUPPORT
-      identifier@char = '';                 % identifier of the building element, e.g. B0001
-      description@char = '';                % description of the building element
-      construction_identifier@char = '';    % identifier for the construction type (Construction,No mass construction),  e.g. C0001, NMC0001
-      adjacent_A@char;                      % identifier for the adjacent side of the buiilding element (zone,ambient,ground,adiabatic or disturbance identifier)
-      adjacent_B@char;                      % identifier for the adjacent side of the buiilding element (zone,ambient,ground,adiabatic or disturbance identifier)
-      window_identifier@char = '';          % identifier for the window in building element, e.g. W0001
-      area@char = '';                       % area of the building element
+      identifier char = '';                 % identifier of the building element, e.g. B0001
+      description char = '';                % description of the building element
+      construction_identifier char = '';    % identifier for the construction type (Construction,No mass construction),  e.g. C0001, NMC0001
+      adjacent_A char;                      % identifier for the adjacent side of the buiilding element (zone,ambient,ground,adiabatic or disturbance identifier)
+      adjacent_B char;                      % identifier for the adjacent side of the buiilding element (zone,ambient,ground,adiabatic or disturbance identifier)
+      window_identifier char = '';          % identifier for the window in building element, e.g. W0001
+      area char = '';                       % area of the building element
       vertices;                               % vertices store the building elements vertices coordinates (we also support 'NULL' in order to allow for inconsistency)
    end % properties
    
