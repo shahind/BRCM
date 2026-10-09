@@ -20,14 +20,13 @@ tbxmanager install brcm
 ```
 however the download links do not work anymore and the publisher is not able to update them [See their explanation here](https://control.ee.ethz.ch/software/BRCM-Toolbox.html)
 
-Right now, you can download the repo and put the files inside the ``toolboxes`` directory where you have installed the ``tbxmanager`` and run the following commands:
+Right now, you can download the repo and put the files inside the ``toolboxes`` directory where you have installed the ``tbxmanager`` under ``brcm\v1.03\all\BRCMToolbox_v1.03`` and run the following command:
 ```
-tbxmanager install brcm
 tbxmanager enable brcm
 ```
-this should add the ``brcm`` directory to the MATLAB directories. Or simply download and put the files in a certain directory and add the directory to the MATLAB directories:
+this should add the ``brcm`` directories to the MATLAB directories. Or simply download and put the files in a certain directory and add the directory to the MATLAB directories:
 ```MATLAB
-addpath(PATH_TO_YOUR_DIRECTORY)
+addpath(genpath(PATH_TO_YOUR_DIRECTORY))
 ```
  Then run the following command in your MATLAB Command Window:
 ```MATLAB
