@@ -24,7 +24,7 @@ Right now, you can download the repo and put the files inside the ``toolboxes`` 
 ```
 tbxmanager enable brcm
 ```
-this should add the ``brcm`` directories to the MATLAB directories. Or simply download and put the files in a certain directory and add the directory to the MATLAB directories:
+this should add the ``brcm`` directories to the MATLAB path. Or simply download and put the files in a certain directory and add the directory to the MATLAB directories:
 ```MATLAB
 addpath(genpath(PATH_TO_YOUR_DIRECTORY))
 ```
